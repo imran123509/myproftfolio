@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { ReactNode, ElementType, RefObject } from "react";
 import {
   motion,
   useAnimationFrame,
@@ -21,8 +21,8 @@ export function Button({
   ...otherProps
 }: {
   borderRadius?: string;
-  children: React.ReactNode;
-  as?: any;
+  children: ReactNode;
+  as?: ElementType; // Change from `any` to `ElementType`
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
@@ -32,7 +32,6 @@ export function Button({
   return (
     <Component
       className={cn(
-        // remove h-16 w-40, add  md:col-span-2
         "bg-transparent relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1",
         containerClassName
       )}
@@ -77,13 +76,13 @@ export const MovingBorder = ({
   ry,
   ...otherProps
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   duration?: number;
   rx?: string;
   ry?: string;
   [key: string]: any;
 }) => {
-  const pathRef = useRef<any>();
+  const pathRef = useRef<SVGRectElement>(null); // Change from `any` to `RefObject<SVGRectElement>`
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
@@ -121,7 +120,7 @@ export const MovingBorder = ({
           height="100%"
           rx={rx}
           ry={ry}
-          ref={pathRef}
+          ref={pathRef} // Change from `any` to `RefObject<SVGRectElement>`
         />
       </svg>
       <motion.div
