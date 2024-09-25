@@ -63,7 +63,7 @@ export const BackgroundGradientAnimation = ({
       interactiveRef.current.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
     }
     move();
-  }, [tgX, tgY]);
+  }, [tgX, tgY, curX, curY]); // Add curX and curY to the dependency array
   
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
