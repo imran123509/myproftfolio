@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-
+import Image from 'next/image'
 import { companies, testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
