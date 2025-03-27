@@ -181,14 +181,14 @@ export const navItems = [
   export const workExperience = [
     {
       id: 1,
-      title: "Software Engineer Intern",
+      title: "Software Engineer At SmartConnect Technologies",
       desc: "Developed And Deployed User And Admin Side APIs For New Feature,Focusing on Optimization For Large user Base And Making Front-End Pages",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
     {
       id: 2,
-      title: "Software Engineer - Hourly Rooms",
+      title: "Software Engineer At Hourly Rooms",
       desc: "Developed and maintained backend systems for a high-traffic Hotel Booking platform using Node.js,JavaScript,and Mysql And Prisma. Designed and optimized database schemas, resulting in a 30% reduction in query response time Implemented RESTful APIs for seamless frontend-backend communication. Ensured security best practices, including data encryption and user authentication.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/exp2.svg",
